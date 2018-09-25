@@ -8,7 +8,7 @@ require('addTask.php');
 <head>
 	<title>Gestionnaire de taches avec timer</title>
 	<meta charset="utf-8">
-	<!-- <style type="text/css" src="css/style.css"</style> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
  <h1>Timer 1</h1>
