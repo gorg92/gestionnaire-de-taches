@@ -1,3 +1,8 @@
+<?php 
+require_once('connect.php'); 
+require_once('readTask.php'); 
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +12,10 @@
 </head>
 <body>
  <h1>Timer 1</h1>
-
+test php en dessous
+    <?php while ($r = $request->fetch()): ?>
+        <p><?php echo htmlspecialchars($r['projet']) ?></p>
+    <?php endwhile; ?>
 
     <p>
         Afficher les taches :
