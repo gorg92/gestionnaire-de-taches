@@ -6,16 +6,11 @@ require_once('timer1.php');
     echo 'test ';
     var_dump($tache);
 
-
-
-
-
     $req = $pdo->prepare("INSERT INTO taches (tache) VALUES (:tache)");
     $req->execute(array(
          
             "tache"=>$tache
-
-           
+      
             ));
 
 
