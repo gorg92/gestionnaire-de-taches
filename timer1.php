@@ -1,7 +1,7 @@
 <?php 
 require_once('connect.php'); 
 require_once('readTask.php'); 
-
+require('addTask.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,9 +13,9 @@ require_once('readTask.php');
 <body>
  <h1>Timer 1</h1>
 test php en dessous
-    <?php while ($r = $request->fetch()): ?>
-        <p><?php echo htmlspecialchars($r['projet']) ?></p>
-    <?php endwhile; ?>
+
+
+
 
     <p>
         Afficher les taches :
@@ -28,56 +28,22 @@ test php en dessous
         <h1>Les tâches</h1>
     </p>
 
-    <p>
-        <input type="text" placeholder="Nouvelle tâche" />
-        <button>Ajouter</button>
-    </p>
+    <form method="post">
+        Ajouter: <input type="text" name="tache"><br>
+        <input type="submit">
+    </form>
+
+
+    
 
     <div class="tasklist" >
-        <p class="task">
-            <input type="checkbox" id="task-1" />
-            <label for="task-1"></label>
-        </p>
+     
 
-        <p class="task">
-            <input type="checkbox" id="task-2" checked />
-            <label for="task-2"></label>
-        </p>
 
-        <p class="task">
-            <input type="checkbox" id="task-3" checked />
-            <label for="task-3"></label>
-        </p>
+    <?php while ($r = $request->fetch()): ?>
+        <p> <input type="checkbox" id="task-1" /><?php echo htmlspecialchars($r['tache']) ?></p>
+    <?php endwhile; ?>
 
-        <p class="task">
-            <input type="checkbox" id="task-4" checked  />
-            <label for="task-4"></label>
-        </p>
-
-        <p class="task">
-            <input type="checkbox" id="task-5" />
-            <label for="task-5"></label>
-        </p>
-
-        <p class="task">
-            <input type="checkbox" id="task-6" />
-            <label for="task-6"></label>
-        </p>
-
-        <p class="task">
-            <input type="checkbox" id="task-7" />
-            <label for="task-7"></label>
-        </p>
-
-        <p class="task">
-            <input type="checkbox" id="task-8" checked />
-            <label for="task-8"></label>
-        </p>
-
-        <p class="task">
-            <input type="checkbox" id="task-9" />
-            <label for="task-9"></label>
-        </p>
     </div>
     
     <script src="js/jquery-3.3.1.min.js"></script>
