@@ -1,8 +1,8 @@
 <?php 
-require_once('connect.php'); 
-require_once('readTask.php'); 
-require('addTask.php');
+require_once('lib/connect.php'); 
+require_once('lib/readTask.php'); 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,13 +13,8 @@ require('addTask.php');
 <body>
  <h1>Timer 1</h1>
 test php en dessous
-
-
-
-
     <p>
         Afficher les taches :
-
         <button onclick="afficherEnCours();">en cours</button>
         <button onclick="afficherTerminees();">terminées</button>
         <button onclick="afficherToutes();">toutes</button>
@@ -28,17 +23,13 @@ test php en dessous
         <h1>Les tâches</h1>
     </p>
 
-    <form method="post">
+    <form method="post" action="addTask.php">
         Ajouter: <input type="text" name="tache"><br>
         <input type="submit">
-    </form>
-
-
-    
+    </form>    
 
     <div class="tasklist" >
      
-
 
     <?php while ($r = $request->fetch()): ?>
         <p> <input type="checkbox" id="task-1" /><?php echo htmlspecialchars($r['tache']) ?></p>

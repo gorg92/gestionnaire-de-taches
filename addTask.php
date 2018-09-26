@@ -1,18 +1,17 @@
 <?php
-include('connect.php');
-require_once('timer1.php');
+include('lib/connect.php');
 
-    $tache=$_POST['tache'];
+    if(isset($_POST['tache'])){
+        $tache = $_POST['tache'];
+    };
+    
     echo 'test ';
     var_dump($tache);
 
     $req = $pdo->prepare("INSERT INTO taches (tache) VALUES (:tache)");
     $req->execute(array(
-         
-            "tache"=>$tache
-      
-            ));
+         "tache"=>$tache
+      )
+    );
 
-
-
-?>
+    header('Location: timer1.php');
