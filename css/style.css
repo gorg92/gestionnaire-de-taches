@@ -1,7 +1,20 @@
 body {
-    background-color: #C0C0C0;
+    background-color: #2F4F4F;
+    font-size: 25px;
+    text-align: center;
 }
+
 
 h1 {
     text-decoration: underline;
+}
+
+a {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+ }
+
+ body {
+    background-image: url("img/mon.jpg");
 }
