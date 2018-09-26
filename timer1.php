@@ -17,7 +17,7 @@ require_once('lib/readTask.php');
 test php en dessous
     <p>
         Afficher les taches :
-        <button onclick="afficherEnCours();">en cours</button>
+       <a><button onclick="afficherEnCours();">en cours</button></a>
         <button onclick="afficherTerminees();">terminées</button>
         <button onclick="afficherToutes();">toutes</button>
         <a href="index.html"><button type="button">Retour</button></a>
