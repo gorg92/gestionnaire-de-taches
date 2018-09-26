@@ -32,7 +32,7 @@ test php en dessous
      
 
     <?php while ($r = $request->fetch()): ?>
-        <p> <input type="checkbox" id="task-1" /><?php echo htmlspecialchars($r['tache']) ?></p>
+        <p> <input type="checkbox" id="<?= $r['id']  ?>" checked="<?= $r['checked']  ?>"/><?php echo htmlspecialchars($r['tache']) ?></p>
     <?php endwhile; ?>
 
     </div>
