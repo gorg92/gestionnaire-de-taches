@@ -11,11 +11,13 @@ require_once('lib/readTask.php');
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+<div id=page>
+
  <h1>Timer 1</h1>
 test php en dessous
     <p>
         Afficher les taches :
-        <button onclick="afficherEnCours();">en cours</button>
+       <a><button onclick="afficherEnCours();">en cours</button></a>
         <button onclick="afficherTerminees();">terminées</button>
         <button onclick="afficherToutes();">toutes</button>
         <a href="index.html"><button type="button">Retour</button></a>
@@ -41,6 +43,6 @@ test php en dessous
     <script src="js/app.js"></script>
 
     <div></div>
-
+</div>
 </body>
 </html>
